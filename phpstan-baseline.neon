@@ -1,0 +1,41 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#1 \\$photo of method App\\\\Models\\\\User\\:\\:updateProfilePhoto\\(\\) expects Illuminate\\\\Http\\\\UploadedFile, string given\\.$#"
+			count: 1
+			path: app/Actions/Fortify/UpdateUserProfileInformation.php
+
+		-
+			message: "#^Method App\\\\Actions\\\\Jetstream\\\\CreateTeam\\:\\:create\\(\\) should return App\\\\Models\\\\Team but returns Illuminate\\\\Database\\\\Eloquent\\\\Model\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/CreateTeam.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<int,Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:each\\(\\) expects callable\\(Illuminate\\\\Database\\\\Eloquent\\\\Model, int\\)\\: mixed, Closure\\(App\\\\Models\\\\Team\\)\\: void given\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/DeleteUser.php
+
+		-
+			message: "#^Parameter \\#1 \\$invitation of class Laravel\\\\Jetstream\\\\Mail\\\\TeamInvitation constructor expects Laravel\\\\Jetstream\\\\TeamInvitation, Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/InviteTeamMember.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$id\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/RemoveTeamMember.php
+
+		-
+			message: "#^PHPDoc type mixed of property App\\\\Models\\\\Team\\:\\:\\$fillable is not covariant with PHPDoc type array\\<string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$fillable\\.$#"
+			count: 1
+			path: app/Models/Team.php
+
+		-
+			message: "#^PHPDoc type mixed of property App\\\\Models\\\\TeamInvitation\\:\\:\\$fillable is not covariant with PHPDoc type array of overridden property Laravel\\\\Jetstream\\\\TeamInvitation\\:\\:\\$fillable\\.$#"
+			count: 1
+			path: app/Models/TeamInvitation.php
+
+		-
+			message: "#^PHPDoc type mixed of property App\\\\Models\\\\User\\:\\:\\$fillable is not covariant with PHPDoc type array\\<string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$fillable\\.$#"
+			count: 1
+			path: app/Models/User.php
